@@ -33,7 +33,10 @@ public class Sistema_SGH_UNI
         // Ciclo principal que mantiene el sistema en ejecución hasta seleccionar la opción salir
         do {
 
-            // Muestra información en pantalla
+            System.out.println("");
+            // Muestra información en pantalla         
+            System.out.println("==| Sistema de Gestion Hospitalaria SGH | HAN |==");
+            System.out.println("");// separa la info por estetica 
             // Muestra en pantalla el mensaje: "=====| Usuario |====="
             System.out.println("=====| Usuario |=====");
             // Muestra en pantalla el mensaje: "1--Paciente"
@@ -1673,70 +1676,80 @@ public class Sistema_SGH_UNI
                                     // Muestra en pantalla el mensaje: "====| Citas en medicina general |===="
                                     System.out.println("====| Citas en medicina general |====");
 
-                                    // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
-                                    for (i = 0; i < total_citas; i++)
-                                    // Abre un bloque de código
-                                    {
-                                        // Verifica si la cita en la posición i corresponde al área médica "Medicina General"
-                                        if (citas[i][3].equalsIgnoreCase("Medicina General"))
+                                    if ( total_citas == 0){ // condicion que lee si hay citas registradas
+                                        System.out.println("No hay citas registradas en el sistema");
+                                    } else { // si hay citas se hace esto
+                                        // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
+                                        for (i = 0; i < total_citas; i++)
                                         // Abre un bloque de código
                                         {
-                                            // Muestra el nombre del paciente correspondiente al registro i
-                                            System.out.println("Paciente: " + citas[i][0]);
-                                            // Muestra la edad del paciente correspondiente al registro i
-                                            System.out.println("Edad: " + citas[i][1] + " años");
-                                            // Muestra la cédula del paciente correspondiente al registro i
-                                            System.out.println("Cedula: " + citas[i][2]);
-                                            // Muestra el área médica del registro i
-                                            System.out.println("Area medica: " + citas[i][3]);
-                                            // Muestra el día de la cita del registro i
-                                            System.out.println("Dia: " + citas[i][4]);
-                                            // Muestra la hora de la cita del registro i
-                                            System.out.println("Hora: " + citas[i][5]);
-                                            // Muestra el estado actual de la cita del registro i
-                                            System.out.println("Estado de la cita: " + citas[i][6]);
+                                            // Verifica si la cita en la posición i corresponde al área médica "Medicina General"
+                                            if (citas[i][3].equalsIgnoreCase("Medicina General"))
+                                            // Abre un bloque de código
+                                            {
+                                                // Muestra el nombre del paciente correspondiente al registro i
+                                                System.out.println("Paciente: " + citas[i][0]);
+                                                // Muestra la edad del paciente correspondiente al registro i
+                                                System.out.println("Edad: " + citas[i][1] + " años");
+                                                // Muestra la cédula del paciente correspondiente al registro i
+                                                System.out.println("Cedula: " + citas[i][2]);
+                                                // Muestra el área médica del registro i
+                                                System.out.println("Area medica: " + citas[i][3]);
+                                                // Muestra el día de la cita del registro i
+                                                System.out.println("Dia: " + citas[i][4]);
+                                                // Muestra la hora de la cita del registro i
+                                                System.out.println("Hora: " + citas[i][5]);
+                                                // Muestra el estado actual de la cita del registro i
+                                                System.out.println("Estado de la cita: " + citas[i][6]);
 
-                                            // Imprime una línea separadora entre cada cita mostrada
-                                            System.out.println("------------------------");
+                                                // Imprime una línea separadora entre cada cita mostrada
+                                                System.out.println("------------------------");
+                                            // Cierra el bloque de código
+                                            }
                                         // Cierra el bloque de código
                                         }
-                                    // Cierra el bloque de código
-                                    }
 
-                                    
+                                    }// cierre de if
+                                                                       
                                     break; // case 1 de registro de citas medicina general
 
                                 // Bloque que se ejecuta cuando la opción seleccionada es 2
                                 case 2:
                                     // Muestra en pantalla el mensaje: "====| Citas en pediatria |===="
                                     System.out.println("====| Citas en pediatria |====");
-                                    // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
-                                    for (i = 0; i < total_citas; i++)
-                                    // Abre un bloque de código
-                                    {
-                                        // Verifica si la cita en la posición i corresponde al área médica "Pediatria"
-                                        if (citas[i][3].equalsIgnoreCase("Pediatria"))
+
+                                    if ( total_citas == 0){ // condicion que lee si hay citas registradas
+                                        System.out.println("No hay citas registradas en el sistema");
+                                    } else {
+                                        // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
+                                        for (i = 0; i < total_citas; i++)
                                         // Abre un bloque de código
                                         {
-                                            // Muestra el nombre del paciente correspondiente al registro i
-                                            System.out.println("Paciente: " + citas[i][0]);
-                                            // Muestra la edad del paciente correspondiente al registro i
-                                            System.out.println("Edad: " + citas[i][1] + " años");
-                                            // Muestra la cédula del paciente correspondiente al registro i
-                                            System.out.println("Cedula: " + citas[i][2]);
-                                            // Muestra el área médica del registro i
-                                            System.out.println("Area medica: " + citas[i][3]);
-                                            // Muestra la fecha completa de la cita del registro i
-                                            System.out.println("Fecha: " + citas[i][4]);
-                                            // Muestra el estado actual de la cita del registro i
-                                            System.out.println("Estado de la cita: " + citas[i][6]);
+                                            // Verifica si la cita en la posición i corresponde al área médica "Pediatria"
+                                            if (citas[i][3].equalsIgnoreCase("Pediatria"))
+                                            // Abre un bloque de código
+                                            {
+                                                // Muestra el nombre del paciente correspondiente al registro i
+                                                System.out.println("Paciente: " + citas[i][0]);
+                                                // Muestra la edad del paciente correspondiente al registro i
+                                                System.out.println("Edad: " + citas[i][1] + " años");
+                                                // Muestra la cédula del paciente correspondiente al registro i
+                                                System.out.println("Cedula: " + citas[i][2]);
+                                                // Muestra el área médica del registro i
+                                                System.out.println("Area medica: " + citas[i][3]);
+                                                // Muestra la fecha completa de la cita del registro i
+                                                System.out.println("Fecha: " + citas[i][4]);
+                                                // Muestra el estado actual de la cita del registro i
+                                                System.out.println("Estado de la cita: " + citas[i][6]);
 
-                                            // Imprime una línea separadora entre cada cita mostrada
-                                            System.out.println("------------------------");
+                                                // Imprime una línea separadora entre cada cita mostrada
+                                                System.out.println("------------------------");
+                                            // Cierra el bloque de código
+                                            }
                                         // Cierra el bloque de código
                                         }
-                                    // Cierra el bloque de código
-                                    }
+
+                                    } // cierre del if                                    
 
                                     break; // case 2 de registro de citas pediatria
 
@@ -1744,33 +1757,40 @@ public class Sistema_SGH_UNI
                                 case 3:
                                     // Muestra en pantalla el mensaje: "====| citas en dermatologia |==="
                                     System.out.println("====| citas en dermatologia |===");
-                                    // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
-                                    for (i = 0; i < total_citas; i++)
-                                    // Abre un bloque de código
-                                    {
-                                        // Verifica si la cita en la posición i corresponde al área médica "Dermatologia"
-                                        if (citas[i][3].equalsIgnoreCase("Dermatologia"))
+
+                                    if ( total_citas == 0){ // condicion que lee cuantas citas hay
+                                        System.out.println("No hay citas registradas en el sistema");
+                                    } else {
+                                        // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
+                                        for (i = 0; i < total_citas; i++)
                                         // Abre un bloque de código
                                         {
-                                            // Muestra el nombre del paciente correspondiente al registro i
-                                            System.out.println("Paciente: " + citas[i][0]);
-                                            // Muestra la edad del paciente correspondiente al registro i
-                                            System.out.println("Edad: " + citas[i][1] + " años");
-                                            // Muestra la cédula del paciente correspondiente al registro i
-                                            System.out.println("Cedula: " + citas[i][2]);
-                                            // Muestra el área médica del registro i
-                                            System.out.println("Area medica: " + citas[i][3]);
-                                            // Muestra la fecha completa de la cita del registro i
-                                            System.out.println("Fecha: " + citas[i][4]);
-                                            // Muestra el estado actual de la cita del registro i
-                                            System.out.println("Estado de la cita: " + citas[i][6]);
+                                            // Verifica si la cita en la posición i corresponde al área médica "Dermatologia"
+                                            if (citas[i][3].equalsIgnoreCase("Dermatologia"))
+                                            // Abre un bloque de código
+                                            {
+                                                // Muestra el nombre del paciente correspondiente al registro i
+                                                System.out.println("Paciente: " + citas[i][0]);
+                                                // Muestra la edad del paciente correspondiente al registro i
+                                                System.out.println("Edad: " + citas[i][1] + " años");
+                                                // Muestra la cédula del paciente correspondiente al registro i
+                                                System.out.println("Cedula: " + citas[i][2]);
+                                                // Muestra el área médica del registro i
+                                                System.out.println("Area medica: " + citas[i][3]);
+                                                // Muestra la fecha completa de la cita del registro i
+                                                System.out.println("Fecha: " + citas[i][4]);
+                                                // Muestra el estado actual de la cita del registro i
+                                                System.out.println("Estado de la cita: " + citas[i][6]);
 
-                                            // Imprime una línea separadora entre cada cita mostrada
-                                            System.out.println("------------------------");
+                                                // Imprime una línea separadora entre cada cita mostrada
+                                                System.out.println("------------------------");
+                                            // Cierra el bloque de código
+                                            }
                                         // Cierra el bloque de código
                                         }
-                                    // Cierra el bloque de código
-                                    }
+
+                                    }// fin del if
+                                    
 
                                     break; // case 3 de regsitro de citas en dematologia
 
@@ -1778,33 +1798,40 @@ public class Sistema_SGH_UNI
                                 case 4:
                                     // Muestra en pantalla el mensaje: "====| Citas en Ortopedia |===="
                                     System.out.println("====| Citas en Ortopedia |====");
-                                    // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
-                                    for (i = 0; i < total_citas; i++)
-                                    // Abre un bloque de código
-                                    {
-                                        // Verifica si la cita en la posición i corresponde al área médica "Ortopedia"
-                                        if (citas[i][3].equalsIgnoreCase("Ortopedia"))
+
+                                    if ( total_citas == 0){ // condicion que lee si hay citas agendadas
+                                        System.out.println("No hay citas registradas en el sistema");
+                                    } else {
+                                        // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
+                                        for (i = 0; i < total_citas; i++)
                                         // Abre un bloque de código
                                         {
-                                            // Muestra el nombre del paciente correspondiente al registro i
-                                            System.out.println("Paciente: " + citas[i][0]);
-                                            // Muestra la edad del paciente correspondiente al registro i
-                                            System.out.println("Edad: " + citas[i][1] + " años");
-                                            // Muestra la cédula del paciente correspondiente al registro i
-                                            System.out.println("Cedula: " + citas[i][2]);
-                                            // Muestra el área médica del registro i
-                                            System.out.println("Area medica: " + citas[i][3]);
-                                            // Muestra la fecha completa de la cita del registro i
-                                            System.out.println("Fecha: " + citas[i][4]);
-                                            // Muestra el estado actual de la cita del registro i
-                                            System.out.println("Estado de la cita: " + citas[i][6]);
+                                            // Verifica si la cita en la posición i corresponde al área médica "Ortopedia"
+                                            if (citas[i][3].equalsIgnoreCase("Ortopedia"))
+                                            // Abre un bloque de código
+                                            {
+                                                // Muestra el nombre del paciente correspondiente al registro i
+                                                System.out.println("Paciente: " + citas[i][0]);
+                                                // Muestra la edad del paciente correspondiente al registro i
+                                                System.out.println("Edad: " + citas[i][1] + " años");
+                                                // Muestra la cédula del paciente correspondiente al registro i
+                                                System.out.println("Cedula: " + citas[i][2]);
+                                                // Muestra el área médica del registro i
+                                                System.out.println("Area medica: " + citas[i][3]);
+                                                // Muestra la fecha completa de la cita del registro i
+                                                System.out.println("Fecha: " + citas[i][4]);
+                                                // Muestra el estado actual de la cita del registro i
+                                                System.out.println("Estado de la cita: " + citas[i][6]);
 
-                                            // Imprime una línea separadora entre cada cita mostrada
-                                            System.out.println("------------------------");
+                                                // Imprime una línea separadora entre cada cita mostrada
+                                                System.out.println("------------------------");
+                                            // Cierra el bloque de código
+                                            }
                                         // Cierra el bloque de código
                                         }
-                                    // Cierra el bloque de código
-                                    }
+
+                                    } // cierre del if
+                                    
 
                                     break; // case 4 de regsitro de citas en ortopedia
 
@@ -1812,33 +1839,39 @@ public class Sistema_SGH_UNI
                                 case 5:
                                     // Muestra en pantalla el mensaje: "====| Citas en Ginecologia y Obstetricia |===="
                                     System.out.println("====| Citas en Ginecologia y Obstetricia |====");
-                                    // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
-                                    for (i = 0; i < total_citas; i++)
-                                    // Abre un bloque de código
-                                    {
-                                        // Verifica si la cita en la posición i corresponde al área médica "Ginecologia y Obstetricia"
-                                        if (citas[i][3].equalsIgnoreCase("Ginecologia y Obstetricia"))
+                                    if ( total_citas == 0){ // condicion que lee cuantas citas agendadas hay
+                                        System.out.println("No hay citas registradas en el sistema");
+                                    } else {
+                                        // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
+                                        for (i = 0; i < total_citas; i++)
                                         // Abre un bloque de código
                                         {
-                                            // Muestra el nombre del paciente correspondiente al registro i
-                                            System.out.println("Paciente: " + citas[i][0]);
-                                            // Muestra la edad del paciente correspondiente al registro i
-                                            System.out.println("Edad: " + citas[i][1] + " años");
-                                            // Muestra la cédula del paciente correspondiente al registro i
-                                            System.out.println("Cedula: " + citas[i][2]);
-                                            // Muestra el área médica del registro i
-                                            System.out.println("Area medica: " + citas[i][3]);
-                                            // Muestra la fecha completa de la cita del registro i
-                                            System.out.println("Fecha: " + citas[i][4]);
-                                            // Muestra el estado actual de la cita del registro i
-                                            System.out.println("Estado de la cita: " + citas[i][6]);
+                                            // Verifica si la cita en la posición i corresponde al área médica "Ginecologia y Obstetricia"
+                                            if (citas[i][3].equalsIgnoreCase("Ginecologia y Obstetricia"))
+                                            // Abre un bloque de código
+                                            {
+                                                // Muestra el nombre del paciente correspondiente al registro i
+                                                System.out.println("Paciente: " + citas[i][0]);
+                                                // Muestra la edad del paciente correspondiente al registro i
+                                                System.out.println("Edad: " + citas[i][1] + " años");
+                                                // Muestra la cédula del paciente correspondiente al registro i
+                                                System.out.println("Cedula: " + citas[i][2]);
+                                                // Muestra el área médica del registro i
+                                                System.out.println("Area medica: " + citas[i][3]);
+                                                // Muestra la fecha completa de la cita del registro i
+                                                System.out.println("Fecha: " + citas[i][4]);
+                                                // Muestra el estado actual de la cita del registro i
+                                                System.out.println("Estado de la cita: " + citas[i][6]);
 
-                                            // Imprime una línea separadora entre cada cita mostrada
-                                            System.out.println("------------------------");
+                                                // Imprime una línea separadora entre cada cita mostrada
+                                                System.out.println("------------------------");
+                                            // Cierra el bloque de código
+                                            }
                                         // Cierra el bloque de código
                                         }
-                                    // Cierra el bloque de código
-                                    }
+
+                                    }// cierre del if
+                                    
 
                                     break; // case 5 de regsitro de citas en ginecologia y obstetricia
 
@@ -1846,34 +1879,40 @@ public class Sistema_SGH_UNI
                                 case 6:
                                     // Muestra en pantalla el mensaje: "====| Citas en Urologia |===="
                                     System.out.println("====| Citas en Urologia |====");
-                                    // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
-                                    for (i = 0; i < total_citas; i++)
-                                    // Abre un bloque de código
-                                    {
-                                        // Verifica si la cita en la posición i corresponde al área médica "Urologia"
-                                        if (citas[i][3].equalsIgnoreCase("Urologia"))
+                                    if ( total_citas == 0){ // condicion que lee si hay citas agendas
+                                        System.out.println("No hay citas ingresadas en el sistema");
+                                    } else {
+                                        // Inicia un ciclo que recorre todas las citas registradas (desde 0 hasta total_citas)
+                                        for (i = 0; i < total_citas; i++)
                                         // Abre un bloque de código
                                         {
-                                            // Muestra el nombre del paciente correspondiente al registro i
-                                            System.out.println("Paciente: " + citas[i][0]);
-                                            // Muestra la edad del paciente correspondiente al registro i
-                                            System.out.println("Edad: " + citas[i][1] + " años");
-                                            // Muestra la cédula del paciente correspondiente al registro i
-                                            System.out.println("Cedula: " + citas[i][2]);
-                                            // Muestra el área médica del registro i
-                                            System.out.println("Area medica: " + citas[i][3]);
-                                            // Muestra la fecha completa de la cita del registro i
-                                            System.out.println("Fecha: " + citas[i][4]);
-                                            // Muestra el estado actual de la cita del registro i
-                                            System.out.println("Estado de la cita: " + citas[i][6]);
+                                            // Verifica si la cita en la posición i corresponde al área médica "Urologia"
+                                            if (citas[i][3].equalsIgnoreCase("Urologia"))
+                                            // Abre un bloque de código
+                                            {
+                                                // Muestra el nombre del paciente correspondiente al registro i
+                                                System.out.println("Paciente: " + citas[i][0]);
+                                                // Muestra la edad del paciente correspondiente al registro i
+                                                System.out.println("Edad: " + citas[i][1] + " años");
+                                                // Muestra la cédula del paciente correspondiente al registro i
+                                                System.out.println("Cedula: " + citas[i][2]);
+                                                // Muestra el área médica del registro i
+                                                System.out.println("Area medica: " + citas[i][3]);
+                                                // Muestra la fecha completa de la cita del registro i
+                                                System.out.println("Fecha: " + citas[i][4]);
+                                                // Muestra el estado actual de la cita del registro i
+                                                System.out.println("Estado de la cita: " + citas[i][6]);
 
-                                            // Imprime una línea separadora entre cada cita mostrada
-                                            System.out.println("------------------------");
+                                                // Imprime una línea separadora entre cada cita mostrada
+                                                System.out.println("------------------------");
+                                            // Cierra el bloque de código
+                                            }
                                         // Cierra el bloque de código
                                         }
-                                    // Cierra el bloque de código
-                                    }
 
+
+                                    }// cierre del if
+                                    
                                     break; // case 6 de regsitro de citas en urologia
                             
                                 // Bloque que se ejecuta si el valor no coincide con ninguno de los casos anteriores

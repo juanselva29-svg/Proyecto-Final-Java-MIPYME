@@ -359,7 +359,7 @@ public class Sistema_SGH_UNI
                     switch (opcion_p)   // Evalua la opcion elegida en el menu del paciente
                     {
                         case 1:  // Opcion 1 del switch
-                            if (total_citas < 10) // condicion para que no se agenden mas citas de las que hay disponibles
+                            if (total_citas < 5) // condicion para que no se agenden mas citas de las que hay disponibles
                             {
                                 System.out.println("====|Agendar cita|====");  // Muestra en pantalla el mensaje: "====|Agendar cita|===="
                                 System.out.println("");  // Imprime una linea vacia (separador visual)
